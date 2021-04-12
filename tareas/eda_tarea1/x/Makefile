@@ -1,0 +1,2 @@
+ejecutarr:
+	gcc promedios.c
