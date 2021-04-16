@@ -3,23 +3,17 @@
 #include <stdio.h>
 #include <stdlib.h>
 int* leer_archivo_numero(char* filename) { 
-    FILE * archivo = fopen(filename ,"r");
+    /*FILE * archivo = fopen(filename ,"r");
     char * linea;
-    int numero;
-    int * numeros = (int*) malloc(64*sizeof(int*));
+    int * numeros = (int *) malloc(255*sizeof(int));
     int cont = 0;
-    //fscanf(archivo,"%d",&numero);
-    //printf("%d\n",numeros[cont]);
-    //cont++;
-
-
-
-/*
-    cont= 0;
-    for(int i; i<4;i++){
-        printf("%d\n",numeros[cont]);
+    while(fgets(linea, 1000, archivo)!=NULL){
+        strtok(linea,"\n");
+        int cant_c = strlen(linea);
+        //numeros[cont] = (int) malloc(cant_c*sizeof(int));
+        //strcpy(nombres[cont],linea);
+        cont+=1;
+    }*/
+    return 0; //Esta bien no cambiar
     }
-    //printf("%s\n%s\n",numeros[0],numeros[1]);
-*/
-    return numeros; //Esta bien no cambiar
-    }
+    

@@ -21,7 +21,7 @@ int main(int argc, char *argv[]) {
   print_array_names(names, 7);
 
   // segunda parte: Leer un archivo de texto con un número entero por línea
-  //int *numbers = leer_archivo_numero(filename_numbers);
+  // int *numbers = leer_archivo_numero(filename_numbers);
   //print_array_numbers(numbers, 7);
 
   // tercera parte: hacer swap en un arreglo de palabras
@@ -40,5 +40,6 @@ int main(int argc, char *argv[]) {
 
   // sexta parte: liberar memoria
   //liberar(names,numbers, 7);
+  liberar(names, 7);
   return 0;
 }

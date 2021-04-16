@@ -5,17 +5,14 @@
 char * * leer_archivo_texto(char* filename) { 
     FILE * archivo = fopen(filename ,"r");
     char * linea;
-    char * * nombres = (char* *) malloc(255*sizeof(char* *));
+    char * * nombres = (char* *) malloc(255*sizeof(char *));
     int cont = 0;
     while(fgets(linea, 1000, archivo)!=NULL){
         strtok(linea,"\n");
-        printf("Valor de linea: %s\n",linea);
-        nombres[cont] = linea;
-        printf("Valor de nombre: %s\n",*(nombres+cont));
-        printf("\n");
+        int cant_c = strlen(linea);
+        nombres[cont] = (char *) malloc(cant_c*sizeof(char));
+        strcpy(nombres[cont],linea);
         cont+=1;
-    }
-    cont = 1;
-    printf("Valor de nombre: %s\n",*(nombres+cont)); // Deberia imprimir Felipe
+    } // Deberia imprimir Felipe
     return nombres; //Esta bien no cambiar
 }
