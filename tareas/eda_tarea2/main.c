@@ -1,8 +1,7 @@
 #include "funciones.h"
-
-int main(int argc, char const *argv[])
-{
-    // Reutilizamos el codigo del main de la tarea anterior.
+// Reutilizamos el codigo del main de la tarea anterior.
+int main(int argc, char const * argv[]){
+    printf("Hola");
     FILE * file;
     if (argc != 2) {
         fprintf(stderr, "Debe ingresar solamente un argumento.");        
@@ -13,6 +12,9 @@ int main(int argc, char const *argv[])
         fprintf(stderr, "El archivo no existe.");
         return 2;
     }
+    Lista * lista;
+    printf("Hola");
+    inicializacion(lista);
     print_sort(file);
     fclose(file);
     return 0;

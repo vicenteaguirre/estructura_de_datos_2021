@@ -2,18 +2,31 @@
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct alumno{
+typedef struct ElementoLista{
     char * nombre;
-    float nota;
-}Alumno;
-typedef struct nodo{
-    Alumno alumno;
-    struct Nodo * siguiente;
-}Nodo;
+    struct ElementoLista * siguiente;
+}Elemento;
+
 typedef struct lista{
-    struct Nodo * principal;
+    Elemento * inicio;
+    Elemento * fin;
+    int tamaño;
 }Lista;
 
+void inicializacion (Lista *lista);
+
+int ins_en_lista_vacia (Lista * lista, char * dato);
+
+int ins_inicio_lista (Lista * lista,char * dato);
+
+int ins_fin_lista (Lista *lista, Elemento *actual, char *dato);
+
+
+
+
+
+
+
+
+
 void print_sort(FILE * file); 
-Nodo * crearNodo(Alumno * alumno);
-void mostrar_alumnos(Nodo * ptr);
