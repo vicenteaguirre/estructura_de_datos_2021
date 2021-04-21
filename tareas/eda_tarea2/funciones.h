@@ -10,7 +10,7 @@ typedef struct ElementoLista{
 typedef struct lista{
     Elemento * inicio;
     Elemento * fin;
-    int tamaño;
+    int cont;
 }Lista;
 
 void inicializacion (Lista *lista);
@@ -21,6 +21,9 @@ int ins_inicio_lista (Lista * lista,char * dato);
 
 int ins_fin_lista (Lista *lista, Elemento *actual, char *dato);
 
+int ins_lista (Lista *lista, char *dato,int pos);
+
+void print_sort(FILE* f);
 
 
 

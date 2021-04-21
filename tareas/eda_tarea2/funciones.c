@@ -5,7 +5,7 @@
 void inicializacion (Lista *lista){
     lista->inicio = NULL;
     lista->fin = NULL;
-    lista->tamaño = 0;
+    lista->cont = 0;
 
 }
 
@@ -22,7 +22,7 @@ int ins_en_lista_vacia (Lista * lista, char * dato){
     nuevo_elemento->siguiente = NULL;
     lista->inicio = nuevo_elemento;
     lista->fin = nuevo_elemento;
-    lista->tamaño++;
+    lista->cont++;
     return 0;
 }
 
@@ -35,7 +35,7 @@ int ins_inicio_lista (Lista * lista, char *dato){
     strcpy (nuevo_elemento->nombre, dato);
     nuevo_elemento->siguiente = lista->inicio;
     lista->inicio = nuevo_elemento;
-    lista->tamaño++;
+    lista->cont++;
 
     return 0;
 }
@@ -50,10 +50,11 @@ int ins_fin_lista (Lista * lista, Elemento * actual, char *dato){
     actual->siguiente = nuevo_elemento; 
     nuevo_elemento->siguiente = NULL;
     lista->fin = nuevo_elemento;
-    lista->tamaño++;
+    lista->cont++;
 
     return 0;
 }
+
 
 
 void print_sort(FILE* f) {

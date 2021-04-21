@@ -1,7 +1,7 @@
 #include "funciones.h"
 // Reutilizamos el codigo del main de la tarea anterior.
 int main(int argc, char const * argv[]){
-    printf("Hola");
+    printf("Hola\n");
     FILE * file;
     if (argc != 2) {
         fprintf(stderr, "Debe ingresar solamente un argumento.");        
@@ -13,7 +13,7 @@ int main(int argc, char const * argv[]){
         return 2;
     }
     Lista * lista;
-    printf("Hola");
+    printf("Hola\n");
     inicializacion(lista);
     print_sort(file);
     fclose(file);

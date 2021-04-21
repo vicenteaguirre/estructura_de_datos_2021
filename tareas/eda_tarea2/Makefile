@@ -1,5 +1,5 @@
 salida: main.o funciones.o
-	gcc main.o funciones.o -o salida
+	gcc main.c funciones.c -o salida
 
 clean:
 	rm -f *.o
