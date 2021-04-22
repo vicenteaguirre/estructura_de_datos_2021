@@ -1,5 +1,4 @@
 #include "operations.h"
-#include "funciones.h"
 
 // Reutilizamos el codigo del main de la tarea anterior.
 int main(int argc, char const * argv[]){
