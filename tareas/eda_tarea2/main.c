@@ -13,7 +13,7 @@ int main(int argc, char const * argv[]){
         fprintf(stderr, "El archivo no existe.");
         return 2;
     }
-    Lista * lista;
+    Lista * lista = malloc(sizeof(Lista));
     inicializacion(lista);
     print_sort(file);
     fclose(file);

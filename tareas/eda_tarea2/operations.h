@@ -4,6 +4,7 @@
 
 typedef struct ElementoLista{
     char * nombre;
+    float * nota;
     struct ElementoLista * siguiente;
 }Elemento;
 
