@@ -17,16 +17,16 @@ typedef struct lista{
 void inicializacion (Lista *lista);
 
 // inserción en una lista vacía 
-int ins_en_lista_vacia (Lista * lista, char * dato);
+int ins_en_lista_vacia (Lista * lista, char * nombre, float * nota);
 
 // inserción al inicio de la lista 
-int ins_inicio_lista (Lista * lista,char * dato);
+int ins_inicio_lista (Lista * lista,char * nombre, float * nota);
 
 //inserción al final de la lista 
-int ins_fin_lista (Lista *lista, Elemento *actual, char *dato);
+int ins_fin_lista (Lista *lista, Elemento *actual, char * nombre, float * nota);
 
 // insercion en la posicion solicitada 
-int ins_lista (Lista *lista, char *dato,int pos);
+int ins_lista (Lista *lista, char * nombre, float * nota,int pos);
 
 // eliminación al inicio de la lista 
 int sup_inicio (Lista *lista);

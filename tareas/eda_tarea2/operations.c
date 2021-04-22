@@ -9,7 +9,7 @@ void inicializacion (Lista *lista){
 }
 
 // inserción en una lista vacía 
-int ins_en_lista_vacia (Lista * lista, char * dato){
+int ins_en_lista_vacia (Lista * lista, char * nombre, float * nota){
     Elemento * nuevo_elemento;
     if((nuevo_elemento = (Elemento *) malloc (sizeof (Elemento))) == NULL)
         return 1;
@@ -17,7 +17,8 @@ int ins_en_lista_vacia (Lista * lista, char * dato){
     if ((nuevo_elemento->nombre = (char *) malloc (50 * sizeof (char))) == NULL)
         return 1;
 
-    strcpy(nuevo_elemento->nombre,dato);
+    strcpy(nuevo_elemento->nombre,nombre);
+    nuevo_elemento->nota = nota;
 
     nuevo_elemento->siguiente = NULL;
     lista->inicio = nuevo_elemento;
@@ -27,13 +28,14 @@ int ins_en_lista_vacia (Lista * lista, char * dato){
 }
 
 // inserción al inicio de la lista 
-int ins_inicio_lista (Lista * lista, char *dato){
+int ins_inicio_lista (Lista * lista, char * nombre, float * nota){
     Elemento * nuevo_elemento;
     if ((nuevo_elemento = (Elemento *) malloc (sizeof (Elemento))) == NULL)
         return -1;
     if ((nuevo_elemento->nombre = (char *) malloc (50 * sizeof (char))) == NULL)
         return -1;
-    strcpy (nuevo_elemento->nombre, dato);
+    strcpy(nuevo_elemento->nombre,nombre);
+    nuevo_elemento->nota = nota;
     nuevo_elemento->siguiente = lista->inicio;
     lista->inicio = nuevo_elemento;
     lista->cont++;
@@ -42,13 +44,14 @@ int ins_inicio_lista (Lista * lista, char *dato){
 }
 
 //inserción al final de la lista
-int ins_fin_lista (Lista * lista, Elemento * actual, char *dato){
+int ins_fin_lista (Lista * lista, Elemento * actual, char * nombre, float * nota){
     Elemento * nuevo_elemento;
     if ((nuevo_elemento = (Elemento *) malloc (sizeof (Elemento))) == NULL)
         return -1;
     if ((nuevo_elemento->nombre = (char *) malloc (50 * sizeof (char))) == NULL)
         return -1;
-    strcpy (nuevo_elemento->nombre, dato);
+    strcpy(nuevo_elemento->nombre,nombre);
+    nuevo_elemento->nota = nota;
     actual->siguiente = nuevo_elemento; 
     nuevo_elemento->siguiente = NULL;
     lista->fin = nuevo_elemento;
@@ -58,7 +61,7 @@ int ins_fin_lista (Lista * lista, Elemento * actual, char *dato){
 }
 
 // insercion en la posicion solicitada
-int ins_lista (Lista * lista, char *dato, int pos){
+int ins_lista (Lista * lista, char * nombre, float * nota, int pos){
     if (lista->cont < 2)
         return -1;
     if (pos < 1 || pos >= lista->cont)
@@ -81,7 +84,8 @@ int ins_lista (Lista * lista, char *dato, int pos){
     if(actual->siguiente == NULL)
         return -1;
     
-    strcpy(nuevo_elemento->nombre, dato);
+    strcpy(nuevo_elemento->nombre,nombre);
+    nuevo_elemento->nota = nota;
     nuevo_elemento->siguiente = actual->siguiente;
     actual->siguiente = nuevo_elemento;
     lista->cont++;
