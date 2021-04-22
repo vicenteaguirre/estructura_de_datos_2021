@@ -15,10 +15,8 @@ int main(int argc, char const * argv[]){
         return 2;
     }
     Lista * lista;
-    //inicializacion(lista);
-    //print_sort(file);
-    //print_avg_from_csv(file);
-    print_sorted(file); // Funciona
+    inicializacion(lista);
+    print_sort(file);
     fclose(file);
     return 0;
 }
