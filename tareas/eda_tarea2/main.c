@@ -1,7 +1,6 @@
 #include "operations.h"
 #include "funciones.h"
-#include "func2.h"
-//#include "ejemploqsort.c"
+
 // Reutilizamos el codigo del main de la tarea anterior.
 int main(int argc, char const * argv[]){
     //printf("Hola\n");
@@ -16,11 +15,10 @@ int main(int argc, char const * argv[]){
         return 2;
     }
     Lista * lista;
-    //printf("Hola\n");
     //inicializacion(lista);
     //print_sort(file);
     //print_avg_from_csv(file);
-    funcion(file);
+    print_sorted(file); // Funciona
     fclose(file);
     return 0;
 }
