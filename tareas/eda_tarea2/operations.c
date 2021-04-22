@@ -3,11 +3,9 @@
 //https://www.monografias.com/trabajos90/listas-c/listas-c.shtml#:~:text=Las%20listas%20enlazadas%20son%20estructuras,lo%20que%20concierne%20al%20enlazado.
 
 void inicializacion (Lista *lista){
-    //lista->inicio = NULL;
-    printf("inicio");
-    printf("fin");
-    printf("cont");
-    lista->cont += 1;
+    lista->inicio = NULL;
+    lista->fin=NULL;
+    lista->cont +=1;
 }
 
 // inserción en una lista vacía 
