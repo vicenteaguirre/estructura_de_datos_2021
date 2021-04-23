@@ -1,9 +1,7 @@
-#include "operations.h"
 #include "funciones.h"
 
 // Reutilizamos el codigo del main de la tarea anterior.
 int main(int argc, char const * argv[]){
-    //printf("Hola\n");
     FILE * file;
     if (argc != 2) {
         fprintf(stderr, "Debe ingresar solamente un argumento.");        
@@ -14,11 +12,7 @@ int main(int argc, char const * argv[]){
         fprintf(stderr, "El archivo no existe.");
         return 2;
     }
-    Lista * lista;
-    //inicializacion(lista);
-    //print_sort(file);
-    //print_avg_from_csv(file);
-    print_sorted(file); // Funciona
+    print_sorted(file);
     fclose(file);
     return 0;
 }
